@@ -8,5 +8,26 @@ import { ThemeButtonComponent } from '../theme-button/theme-button.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  options = [
+    {
+      title: "Home",
+      link: "#home"
+    },
+    {
+      title: "About",
+      link: "#about"
+    },
+    {
+      title: "Stack",
+      link: "#stack"
+    },
+    {
+      title: "Work",
+      link: "#work"
+    },
+    {
+      title: "Contact",
+      link: "#contact"
+    }
+  ]
 }
