@@ -72,7 +72,6 @@
 
 .nav-menu::before {
   content: "";
-  /* show by default */
 }
 
 .content__item {
