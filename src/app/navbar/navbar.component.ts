@@ -18,12 +18,16 @@ export class NavbarComponent {
       link: "#about"
     },
     {
-      title: "Stack",
-      link: "#stack"
+      title: "Experience",
+      link: "#experience"
     },
     {
       title: "Work",
       link: "#work"
+    },
+    {
+      title: "Stack",
+      link: "#stack"
     },
     {
       title: "Contact",
