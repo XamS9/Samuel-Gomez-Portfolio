@@ -27,32 +27,52 @@
 <div class="flex flex-col gap-y-16">
   @for (project of projects; track $index) {
   <article
-    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+    class="flex flex-col group md:flex-row md:space-x-8 md:space-y-0 items-center hover:scale-105 transition duration-200 group p-4"
   >
+    <span
+      class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-200 group-hover:w-full"
+    ></span>
+    <span
+      class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-200 group-hover:h-full"
+    ></span>
+    <span
+      class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-200 group-hover:w-full"
+    ></span>
+    <span
+      class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-200 group-hover:h-full"
+      style="margin: 0"
+    ></span>
     @defer {
-    <div class="w-full md:w-1/2">
-      <div
-        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
-      >
-        <img
-          alt="{{ project.title }}"
-          class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-          loading="lazy"
-          src="{{ project.image }}"
-        />
+    <div class="w-full md:w-1/2 md:max-w-lg" style="margin: 0">
+      <div class="flex flex-row items-center justify-between">
+        <h3 class="text-2xl font-bold">
+          {{ project.title }}
+        </h3>
+        <a
+          href="{{ project.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn hover:scale-110 hover:opacity-70 transition md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 496 512"
+          >
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          Code</a
+        >
       </div>
-    </div>
-    } @placeholder {
-    <app-card-skeleton />
-    } @defer {
-    <div class="w-full md:w-1/2 md:max-w-lg">
-      <h3 class="text-2xl font-bold">
-        {{ project.title }}
-      </h3>
       <div class="flex flex-wrap mt-2">
-        <ul class="flex flex-row mb-2 gap-x-2">
+        <ul class="md:grid md:grid-cols-3 flex lg:flex mb-2 gap-2">
           @for (tag of project.tags; track $index) {
-          <li>
+          <li class="hover:scale-110 transition duration-150">
             <span
               class="flex gap-x-2 rounded-full text-xs bg-neutral text-neutral-content py-1 px-2"
             >
@@ -67,7 +87,12 @@
           {{ project.description }}
         </div>
         <footer class="flex items-end justify-start mt-4 gap-x-4">
-          <button class="btn">
+          <a
+            href="{{ project.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn hover:scale-110 hover:opacity-70 transition max-md:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -80,8 +105,8 @@
                 fill="currentColor"
               ></path>
             </svg>
-            <a href="{{ project.github }}"> See code</a>
-          </button>
+            Code</a
+          >
         </footer>
       </div>
     </div>
@@ -104,6 +129,20 @@
         class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"
       ></div>
     </div>
+    } @defer {
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative mr-2 flex flex-col col-span-6 row-span-5 gap-8 transition duration-200 ease-in-out shadow-xl overflow-clip rounded-xl sm:rounded-xl lg:hover:scale-110 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+      >
+        <img
+          alt="{{ project.title }}"
+          class="object-cover object-top w-full h-56 transition duration-200 sm:h-full md:scale-110 md:group-hover:scale-105"
+          src="{{ project.image }}"
+        />
+      </div>
+    </div>
+    } @placeholder {
+    <app-card-skeleton />
     }
   </article>
   }
