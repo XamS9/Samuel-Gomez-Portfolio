@@ -12,31 +12,31 @@ export class CardsComponent {
   TAGS = {
     React: {
       name: 'React.js',
-      icon: '../../assets/react-javascript-js.svg',
+      icon: '../../assets/icons/react-javascript-js.svg',
     },
     Tailwind: {
       name: 'Tailwind CSS',
-      icon: '../../assets/tailwind-css-svgrepo-com.svg',
+      icon: '../../assets/icons/tailwind-css-svgrepo-com.svg',
     },
     Node: {
       name: 'Express.js',
-      icon: '../../assets/node-js.svg',
+      icon: '../../assets/icons/node-js.svg',
     },
     Postgres: {
       name: 'Postgresql',
-      icon: '../../assets/PostgreSQL-Logo.wine.svg',
+      icon: '../../assets/icons/PostgreSQL-Logo.wine.svg',
     },
     Sequelize: {
       name: 'Sequelize',
-      icon: '../../assets/sequelize-svgrepo-com.svg',
+      icon: '../../assets/icons/sequelize-svgrepo-com.svg',
     },
     Angular: {
       name: 'Angular',
-      icon: '../../assets/angular-icon-seeklogo.svg',
+      icon: '../../assets/icons/angular-icon-seeklogo.svg',
     },
     Daisyui: {
       name: 'Daisyui',
-      icon: '../../assets/Daisyui.png',
+      icon: '../../assets/icons/daisyui.svg',
     }
   };
   projects = [
