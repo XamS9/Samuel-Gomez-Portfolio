@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { ContentComponent } from './content/content.component';
@@ -9,6 +9,4 @@ import { ContentComponent } from './content/content.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'xams-portfolio';
-}
+export class AppComponent {}
