@@ -8,6 +8,16 @@ module.exports = {
       },
       container: {
         padding: '1rem'
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'scale(1.05)' },
+          '50%': { transform: 'scale(1)' },
+          
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 2s ease-in-out infinite'
       }
     },
   },
