@@ -37,6 +37,8 @@ export class NavbarComponent {
   ];
   scrollToElement(elementId: string): void {
     window.scroll(0, this.getElementPosition(elementId) ?  this.getElementPosition(elementId) - 95: 0);
+    const drawer = document.getElementById("my-drawer-3") as HTMLInputElement
+    drawer.checked = false
   }
   getElementPosition(elementId: string): number {
     const position = document.getElementById(elementId)?.offsetTop || 0

@@ -25,7 +25,9 @@
           </svg>
         </label>
       </div>
-      <app-theme-button class="hover:bg-inherit focus:bg-inherit absolute right-0 pr-2 md:hidden" />
+      <app-theme-button
+        class="hover:bg-inherit focus:bg-inherit absolute right-0 pr-2 md:hidden"
+      />
       <div class="hidden md:block">
         <ul class="menu menu-horizontal">
           @for (option of options; track $index) {
@@ -54,9 +56,12 @@
     <ul class="menu p-4 w-80 min-h-full mt-14">
       @for (option of options; track $index) {
       <li class="flex justify-center">
-        <a class="nav-menu link--elara hover:bg-inherit focus:bg-inherit">{{
-          option.title
-        }}</a>
+        <a
+          id="{{ option.link }}-button"
+          (click)="scrollToElement(option.link)"
+          class="nav-menu link--elara hover:bg-inherit focus:bg-inherit"
+          >{{ option.title }}</a
+        >
       </li>
       }
     </ul>
