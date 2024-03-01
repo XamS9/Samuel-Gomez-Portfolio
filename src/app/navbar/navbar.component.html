@@ -3,7 +3,7 @@
 >
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
-    <div class="w-full navbar">
+    <div class="w-full navbar p-0">
       <div class="flex-none md:hidden">
         <label
           for="my-drawer-3"
@@ -25,18 +25,22 @@
           </svg>
         </label>
       </div>
+      <app-theme-button class="hover:bg-inherit focus:bg-inherit absolute right-0 pr-2 md:hidden" />
       <div class="hidden md:block">
         <ul class="menu menu-horizontal">
           @for (option of options; track $index) {
           <li class="flex justify-center">
             <a
-            id="{{ option.link }}-button"
+              id="{{ option.link }}-button"
               (click)="scrollToElement(option.link)"
               class="nav-menu link--elara hover:bg-inherit focus:bg-inherit"
               >{{ option.title }}</a
             >
           </li>
           }
+          <li htmlFor="theme-button">
+            <app-theme-button class="hover:bg-inherit focus:bg-inherit" />
+          </li>
         </ul>
       </div>
     </div>

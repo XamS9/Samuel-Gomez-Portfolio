@@ -8,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './stack.component.css'
 })
 export class StackComponent {
+  TOOLS = [
+    {
+      name: "Node.js",
+      icon: ""
+    },
+    {
+      name: "Node.js",
+      icon: ""
+    },
+    {
+      name: "Node.js",
+      icon: ""
+    },
+    {
+      name: "Node.js",
+      icon: ""
+    },
+    {
+      name: "Node.js",
+      icon: ""
+    },
+    {
+      name: "Node.js",
+      icon: ""
+    },
+  ]
 
 }
