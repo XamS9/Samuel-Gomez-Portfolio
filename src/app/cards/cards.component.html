@@ -140,7 +140,7 @@
             id="{{ project.id }}"
             alt="{{ project.title }}"
             class="object-cover object-top w-full h-56 transition duration-200 sm:h-full md:scale-110 md:group-hover:scale-105"
-            src="{{ project.image }}"
+            [src]="getTheme() ? project.wImage : project.bImage"
           />
         </app-browser-mockup>
       </div>
