@@ -15,20 +15,22 @@ export class ThemeButtonComponent implements OnInit {
   isLight: boolean;
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      if (window.localStorage.getItem('theme'))
-        this.isLight = window.localStorage.getItem('theme') ? true : false;
+      if (window.localStorage.getItem('theme')) {
+        document.body.setAttribute('data-theme', 'lofi');
+      }
+      this.isLight = window.localStorage.getItem('theme') ? true : false;
     }
   }
   handleClick(): void {
-    this.getSavedPreference() ? this.savePreference() : this.deletePreference()
+    this.getSavedPreference() ? this.savePreference() : this.deletePreference();
   }
   savePreference(): void {
     window.localStorage.setItem('theme', 'lofi');
-    document.body.setAttribute("data-theme", "lofi")
+    document.body.setAttribute('data-theme', 'lofi');
   }
   deletePreference(): void {
-    window.localStorage.clear()
-    document.body.setAttribute("data-theme", "dark")
+    window.localStorage.clear();
+    document.body.setAttribute('data-theme', 'dark');
   }
   getSavedPreference(): boolean {
     if (window.localStorage.getItem('theme')) {

@@ -5,34 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './stack.component.html',
-  styleUrl: './stack.component.css'
+  styleUrl: './stack.component.css',
 })
-export class StackComponent {
-  TOOLS = [
-    {
-      name: "Node.js",
-      icon: ""
-    },
-    {
-      name: "Node.js",
-      icon: ""
-    },
-    {
-      name: "Node.js",
-      icon: ""
-    },
-    {
-      name: "Node.js",
-      icon: ""
-    },
-    {
-      name: "Node.js",
-      icon: ""
-    },
-    {
-      name: "Node.js",
-      icon: ""
-    },
-  ]
-
-}
+export class StackComponent {}
