@@ -1,10 +1,10 @@
 <div
-  class="drawer fixed z-50 navbar shadow-lg backdrop-blur-lg lg:flex lg:justify-center"
+  class="drawer fixed z-50 navbar shadow-lg backdrop-blur-lg md:flex md:justify-center max-md:p-0"
 >
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <div class="w-full navbar">
-      <div class="flex-none lg:hidden">
+      <div class="flex-none md:hidden">
         <label
           for="my-drawer-3"
           aria-label="open sidebar"
@@ -25,11 +25,12 @@
           </svg>
         </label>
       </div>
-      <div class="hidden lg:block">
+      <div class="hidden md:block">
         <ul class="menu menu-horizontal">
           @for (option of options; track $index) {
           <li class="flex justify-center">
             <a
+            id="{{ option.link }}-button"
               (click)="scrollToElement(option.link)"
               class="nav-menu link--elara hover:bg-inherit focus:bg-inherit"
               >{{ option.title }}</a

@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "Helvetica", "system-ui", "Roboto"],
       },
+      container: {
+        padding: '1rem'
+      }
     },
   },
   daisyui: {

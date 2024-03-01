@@ -35,8 +35,10 @@ export class NavbarComponent {
     },
   ];
   scrollToElement(elementId: string): void {
-    const element = document.getElementById(elementId);
-    const result = element?.offsetTop
-    window.scroll(0, result ? result - 95: 0);
+    window.scroll(0, this.getElementPosition(elementId) ?  this.getElementPosition(elementId) - 95: 0);
+  }
+  getElementPosition(elementId: string): number {
+    const position = document.getElementById(elementId)?.offsetTop || 0
+    return position
   }
 }

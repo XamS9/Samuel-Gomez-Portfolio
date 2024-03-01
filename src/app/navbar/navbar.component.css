@@ -34,6 +34,21 @@
       100% 0%
     );
   }
+  .hover::before {
+    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+    clip-path: polygon(
+      0% 0%,
+      0% 100%,
+      50% 100%,
+      50% 0,
+      50% 0,
+      50% 100%,
+      50% 100%,
+      0 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
   
   .link--elara span {
     display: inline-block;
