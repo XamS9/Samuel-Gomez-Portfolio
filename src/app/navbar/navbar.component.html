@@ -29,9 +29,11 @@
         <ul class="menu menu-horizontal">
           @for (option of options; track $index) {
           <li class="flex justify-center">
-            <a class="nav-menu link--elara hover:bg-inherit focus:bg-inherit">{{
-              option.title
-            }}</a>
+            <a
+              (click)="scrollToElement(option.link)"
+              class="nav-menu link--elara hover:bg-inherit focus:bg-inherit"
+              >{{ option.title }}</a
+            >
           </li>
           }
         </ul>

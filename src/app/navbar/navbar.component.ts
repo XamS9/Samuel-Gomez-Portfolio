@@ -5,33 +5,38 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   options = [
     {
-      title: "Home",
-      link: "#home"
+      title: 'Home',
+      link: 'home',
     },
     {
-      title: "About",
-      link: "#about"
+      title: 'About',
+      link: 'about',
     },
     {
-      title: "Experience",
-      link: "#experience"
+      title: 'Experience',
+      link: 'experience',
     },
     {
-      title: "Work",
-      link: "#work"
+      title: 'Projects',
+      link: 'projects',
     },
     {
-      title: "Stack",
-      link: "#stack"
+      title: 'Stack',
+      link: 'stack',
     },
     {
-      title: "Contact",
-      link: "#contact"
-    }
-  ]
+      title: 'Contact',
+      link: 'contact',
+    },
+  ];
+  scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    const result = element?.offsetTop
+    window.scroll(0, result ? result - 95: 0);
+  }
 }
