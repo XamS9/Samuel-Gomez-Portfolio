@@ -11,13 +11,13 @@ module.exports = {
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'scale(1.05)' },
-          '50%': { transform: 'scale(1)' },
+          '0%, 100%': { transform: 'scale(1.01)' },
+          '50%': { transform: 'scale(0.99)' },
           
         }
       },
       animation: {
-        wiggle: 'wiggle 2s ease-in-out infinite'
+        wiggle: 'wiggle 1.5s ease-in-out infinite'
       }
     },
   },
