@@ -9,15 +9,12 @@ import { BrowserMockupComponent } from '../browser-mockup/browser-mockup.compone
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css',
 })
-export class CardsComponent implements AfterViewInit{
+export class CardsComponent {
   isLight: boolean = false;
-  getTheme(): boolean{
-    return window.localStorage.getItem("theme") ? true : false
+  getTheme(): boolean {
+    return window.localStorage.getItem('theme') ? true : false;
   }
-  ngAfterViewInit(): void {
-    if(window)
-    window.localStorage.getItem("theme")
-  }
+
   TAGS = {
     React: {
       name: 'React.js',
@@ -52,8 +49,7 @@ export class CardsComponent implements AfterViewInit{
     {
       id: 'portfolio-item',
       title: 'Samuel Gomez Portfolio',
-      description:
-        'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas ',
+      description: 'This is my personal portfolio. For this one I use Angular with Taildwin CSS and Daisyui for fast style development. It also use SSR and is fully mobile responsive',
       year: '2024',
       bImage: '../../assets/portfolio.png',
       wImage: '../../assets/portfolio-w.png',
@@ -64,11 +60,11 @@ export class CardsComponent implements AfterViewInit{
     {
       id: 'bootcamp-item',
       title: 'Cincinnatus bootcamp - CRUD',
-      description:
-        'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas ',
+      description: `It's web platform based on udemy, you can learn about anything with online courses. As an admin you can create, read, update and delete every data with the dashboard and also subscribe to any course and view the content like a regular student as well.
+      `,
       year: '2023',
-      bImage: '../../assets/portfolio.png',
-      wImage: '../../assets/portfolio-w.png',
+      bImage: '../../assets/bootcamp.png',
+      wImage: '../../assets/bootcamp-w.png',
       tags: [
         this.TAGS.React,
         this.TAGS.Node,
