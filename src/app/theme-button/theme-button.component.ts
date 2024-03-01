@@ -21,7 +21,6 @@ export class ThemeButtonComponent implements OnInit {
   }
   handleClick(): void {
     this.getSavedPreference() ? this.savePreference() : this.deletePreference()
-    console.log(this.isLight)
   }
   savePreference(): void {
     window.localStorage.setItem('theme', 'lofi');
