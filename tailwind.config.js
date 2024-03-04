@@ -7,22 +7,33 @@ module.exports = {
         sans: ["Inter", "Helvetica", "system-ui", "Roboto"],
       },
       container: {
-        padding: '1rem'
+        padding: "1rem",
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'scale(1.01)' },
-          '50%': { transform: 'scale(0.99)' },
-          
-        }
+          "0%, 100%": { transform: "scale(1.01)" },
+          "50%": { transform: "scale(0.99)" },
+        },
       },
       animation: {
-        wiggle: 'wiggle 1.5s ease-in-out infinite'
-      }
+        wiggle: "wiggle 1.5s ease-in-out infinite",
+      },
     },
   },
   daisyui: {
-    themes: ["lofi", "dark"],
+    themes: [
+      {
+        lofi: {
+          ...require("daisyui/src/theming/themes")["lofi"],
+          "--rounded-btn": "0.5rem",
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+        },
+      },
+    ],
   },
   plugins: [require("daisyui")],
 };
