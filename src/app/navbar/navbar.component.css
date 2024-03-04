@@ -81,3 +81,9 @@
   .nav-menu::before {
     content: "";
   }
+
+  .drawer-toggle:checked ~ .drawer-side {
+    pointer-events: auto;
+    visibility: visible;
+    overflow-y: hidden;
+}
