@@ -15,10 +15,6 @@ export class NavbarComponent {
       link: 'home',
     },
     {
-      title: 'About',
-      link: 'about',
-    },
-    {
       title: 'Experience',
       link: 'experience',
     },
