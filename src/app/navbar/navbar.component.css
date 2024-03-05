@@ -1,89 +1,102 @@
 .link--elara {
-    font-size: 1.375rem;
-  }
-  
-  .link--elara::before {
-    transform-origin: 50% 100%;
-    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
-    clip-path: polygon(
-      0% 0%,
-      0% 100%,
-      0 100%,
-      0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 100%,
-      100% 100%,
-      100% 0%
-    );
-  }
-  
-  .link--elara:hover::before {
-    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
-    clip-path: polygon(
-      0% 0%,
-      0% 100%,
-      50% 100%,
-      50% 0,
-      50% 0,
-      50% 100%,
-      50% 100%,
-      0 100%,
-      100% 100%,
-      100% 0%
-    );
-  }
-  .hover::before {
-    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
-    clip-path: polygon(
-      0% 0%,
-      0% 100%,
-      50% 100%,
-      50% 0,
-      50% 0,
-      50% 100%,
-      50% 100%,
-      0 100%,
-      100% 100%,
-      100% 0%
-    );
-  }
-  
-  .link--elara span {
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
-  }
-  
-  .link--elara:hover span {
-    transform: translate3d(0, -2px, 0);
-  }
-  
-  .nav-menu {
-    cursor: pointer;
-    font-size: 18px;
-    position: relative;
-    white-space: nowrap;
-    color: var(--color-text);
-  }
-  
-  .nav-menu::before,
-  .nav-menu::after {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    top: 100%;
-    left: 0;
-    pointer-events: none;
-  }
-  
-  .nav-menu::before {
-    content: "";
-  }
+  font-size: 1.375rem;
+}
 
-  .drawer-toggle:checked ~ .drawer-side {
-    pointer-events: auto;
-    visibility: visible;
-    overflow-y: hidden;
+.link--elara::before {
+  transform-origin: 50% 100%;
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    0 100%,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+.link--elara:hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    50% 100%,
+    50% 0,
+    50% 0,
+    50% 100%,
+    50% 100%,
+    0 100%,
+    100% 100%,
+    100% 0%
+  );
+}
+.hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    50% 100%,
+    50% 0,
+    50% 0,
+    50% 100%,
+    50% 100%,
+    0 100%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+.link--elara span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.link--elara:hover span {
+  transform: translate3d(0, -2px, 0);
+}
+
+.nav-menu {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+
+.nav-menu::before,
+.nav-menu::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.nav-menu::before {
+  content: "";
+}
+
+.drawer-toggle:checked ~ .drawer-side {
+  pointer-events: auto;
+  visibility: visible;
+  overflow-y: hidden;
+}
+
+.fade-in {
+  animation: fade-in 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
