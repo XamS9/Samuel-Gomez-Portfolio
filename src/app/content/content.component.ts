@@ -7,9 +7,13 @@ import { ExperienceComponent } from '../experience/experience.component';
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [CardsComponent, ContactComponent, StackComponent, ExperienceComponent],
+  imports: [
+    CardsComponent,
+    ContactComponent,
+    StackComponent,
+    ExperienceComponent,
+  ],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.css'
+  styleUrl: './content.component.css',
 })
-export class ContentComponent {
-}
+export class ContentComponent {}
