@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CardSkeletonComponent } from '../card-skeleton/card-skeleton.component';
 import { BrowserMockupComponent } from '../browser-mockup/browser-mockup.component';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-cards',
