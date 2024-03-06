@@ -12,26 +12,9 @@ declare let particlesJS: any;
   imports: [CommonModule],
 })
 export class ParticlesComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    this.isLight = false;
-  }
-  isLight: boolean;
-  getTheme(): boolean {
-    if (isPlatformBrowser(this.platformId)) {
-      return window.localStorage.getItem('theme') ? true : false;
-    } else { 
-      return false
-    }
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.loadParticles();
-      if (window.localStorage.getItem('theme')) {
-        this.isLight = true;
-      } else {
-        this.isLight = false;
-      }
-    }
+    if (isPlatformBrowser(this.platformId)) this.loadParticles();
   }
 
   loadParticles(): void {

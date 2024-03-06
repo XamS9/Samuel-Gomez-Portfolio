@@ -1,10 +1,10 @@
 import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-scroll-up-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgIf],
   templateUrl: './scroll-up-button.component.html',
   styleUrl: './scroll-up-button.component.css',
 })
