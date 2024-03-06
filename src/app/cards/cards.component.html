@@ -77,7 +77,12 @@
             <span
               class="flex gap-x-2 rounded-full text-xs bg-neutral text-neutral-content py-1 px-2"
             >
-              <img src="{{ tag.icon }}" class="size-4" alt="{{ tag.name }} logo"/>
+              <img
+                src="{{ tag.icon }}"
+                class="size-4"
+                alt="{{ tag.name }} logo"
+                loading="lazy"
+              />
               {{ tag.name }}
             </span>
           </li>
@@ -113,22 +118,12 @@
     </div>
     } @placeholder {
     <div class="w-full">
-      <div
-        class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"
-      ></div>
-      <div
-        class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[480px] mb-2.5"
-      ></div>
-      <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-      <div
-        class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[440px] mb-2.5"
-      ></div>
-      <div
-        class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[460px] mb-2.5"
-      ></div>
-      <div
-        class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"
-      ></div>
+      <div class="h-2.5 w-48 mb-4"></div>
+      <div class="h-2 max-w-[480px] mb-2.5"></div>
+      <div class="h-2 mb-2.5"></div>
+      <div class="h-2 max-w-[440px] mb-2.5"></div>
+      <div class="h-2 max-w-[460px] mb-2.5"></div>
+      <div class="h-2 max-w-[360px]"></div>
     </div>
     } @defer {
     <div class="w-full md:w-1/2">
@@ -140,7 +135,10 @@
             id="{{ project.id }}"
             alt="{{ project.title }}"
             class="object-cover object-top w-full h-56 transition duration-200 sm:h-full md:scale-110 md:group-hover:scale-105"
-            [src]="getTheme() ? project.wImage : project.bImage"
+            loading="lazy"
+            width="400"
+            height="250"
+            src="{{ getTheme() ? project.wImage : project.bImage }}"
           />
         </app-browser-mockup>
       </div>

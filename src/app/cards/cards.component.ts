@@ -1,6 +1,7 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { CardSkeletonComponent } from '../card-skeleton/card-skeleton.component';
 import { BrowserMockupComponent } from '../browser-mockup/browser-mockup.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-cards',
@@ -14,7 +15,6 @@ export class CardsComponent {
   getTheme(): boolean {
     return window.localStorage.getItem('theme') ? true : false;
   }
-
   TAGS = {
     React: {
       name: 'React.js',
@@ -49,7 +49,8 @@ export class CardsComponent {
     {
       id: 'portfolio-item',
       title: 'Samuel Gomez Portfolio',
-      description: 'This is my personal portfolio. For this one I use Angular with Taildwin CSS and Daisyui for fast style development. It also use SSR and is fully mobile responsive',
+      description:
+        'This is my personal portfolio. For this one I use Angular with Taildwin CSS and Daisyui for fast style development. It also use SSR and is fully mobile responsive',
       year: '2024',
       bImage: 'assets/portfolio.png',
       wImage: 'assets/portfolio-w.png',
