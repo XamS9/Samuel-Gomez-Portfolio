@@ -136,9 +136,10 @@
             alt="{{ project.title }}"
             class="object-cover object-top w-full h-56 transition duration-200 sm:h-full md:scale-110 md:group-hover:scale-105"
             loading="lazy"
-            width="400"
-            height="250"
-            src="{{ getTheme() ? project.wImage : project.bImage }}"
+            [width]="400"
+            [height]="200"
+            style="height: auto"
+            src="{{ this.isLight ? project.wImage : project.bImage }}"
           />
         </app-browser-mockup>
       </div>

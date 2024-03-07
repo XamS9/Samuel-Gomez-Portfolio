@@ -1,5 +1,6 @@
 import { NgIf, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-theme-button',
@@ -9,10 +10,10 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
   styleUrl: './theme-button.component.css',
 })
 export class ThemeButtonComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    this.isLight = false;
-  }
-  isLight: boolean;
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public themeService: ThemeService
+  ) {}
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       if (window.localStorage.getItem('theme')) {
@@ -22,7 +23,9 @@ export class ThemeButtonComponent implements OnInit {
         document.body.setAttribute('data-theme', 'dark');
         document.documentElement.classList.add('dark');
       }
-      this.isLight = window.localStorage.getItem('theme') ? true : false;
+      this.themeService.setLight(
+        window.localStorage.getItem('theme') ? true : false
+      );
     }
   }
   handleClick(): void {
@@ -32,11 +35,13 @@ export class ThemeButtonComponent implements OnInit {
     window.localStorage.setItem('theme', 'lofi');
     document.body.setAttribute('data-theme', 'lofi');
     document.documentElement.classList.remove('dark');
+    this.themeService.setLight(true);
   }
   deletePreference(): void {
     window.localStorage.clear();
     document.documentElement.classList.add('dark');
     document.body.setAttribute('data-theme', 'dark');
+    this.themeService.setLight(false);
   }
   getSavedPreference(): boolean {
     if (window.localStorage.getItem('theme')) {

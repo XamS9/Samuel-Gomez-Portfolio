@@ -1,5 +1,5 @@
 <label id="theme-button" class="swap swap-rotate">
-  <input type="checkbox" class="theme-controller" value="lofi" [checked]="isLight" (click)="handleClick()"/>
+  <input type="checkbox" class="theme-controller" value="lofi" [checked]="themeService.getLight()" (click)="handleClick()"/>
   <svg
     class="swap-on fill-current w-9 h-9"
     xmlns="http://www.w3.org/2000/svg"

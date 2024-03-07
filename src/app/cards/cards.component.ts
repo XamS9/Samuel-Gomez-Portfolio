@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardSkeletonComponent } from '../card-skeleton/card-skeleton.component';
 import { BrowserMockupComponent } from '../browser-mockup/browser-mockup.component';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-cards',
@@ -9,10 +10,15 @@ import { BrowserMockupComponent } from '../browser-mockup/browser-mockup.compone
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css',
 })
-export class CardsComponent {
+export class CardsComponent implements OnInit {
+  constructor(public themeService: ThemeService) {
+    this.isLight = false;
+  }
   isLight: boolean = false;
-  getTheme(): boolean {
-    return window.localStorage.getItem('theme') ? true : false;
+  ngOnInit(): void {
+    this.themeService.isLight$.subscribe((isLight) => {
+      this.isLight = isLight;
+    });
   }
   TAGS = {
     React: {
