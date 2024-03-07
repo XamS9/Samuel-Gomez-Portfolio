@@ -28,16 +28,18 @@
       >
     </div>
     <app-experience class="mb-6" id="experience" />
-    @defer () {
     <app-cards class="mb-6" id="projects" />
-    } @defer () {
-    <div
-      class="flex lg:flex-row flex-col items-center justify-center lg:gap-x-10"
-    >
-      <app-stack id="stack" />
-      <div></div>
-      <app-contact id="contact" />
-    </div>
+    @defer () {
+      <div
+        class="flex lg:flex-row flex-col items-center justify-center lg:gap-x-10"
+      >
+        <app-stack id="stack" />
+        <div></div>
+        <app-contact id="contact" />
+      </div>
     }
   </section>
 </div>
+@defer () {
+  <app-particles />
+}

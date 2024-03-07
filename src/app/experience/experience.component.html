@@ -1,7 +1,8 @@
 <div class="flex flex-col mb-6">
   <h2
     class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-primary"
-    ><svg
+  >
+    <svg
       width="28"
       height="28"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +24,7 @@
     </svg>
     Experience
   </h2>
+  @defer () {
   <section class="experiences">
     <article
       class="h-fit p-4 ease hover:scale-105 duration-200 transition group"
@@ -91,4 +93,15 @@
       </ul>
     </article>
   </section>
+  } @placeholder {
+  <div role="status" class="max-w-sm animate-pulse">
+    <div class="h-2.5 w-48 mb-4 bg-base-content rounded-full"></div>
+    <div class="h-2 max-w-[360px] mb-2.5 bg-base-content rounded-full"></div>
+    <div class="h-2 mb-2.5 bg-base-content rounded-full"></div>
+    <div class="h-2 max-w-[330px] mb-2.5 bg-base-content rounded-full"></div>
+    <div class="h-2 max-w-[300px] mb-2.5 bg-base-content rounded-full"></div>
+    <div class="h-2 max-w-[360px] bg-base-content rounded-full"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+  }
 </div>
