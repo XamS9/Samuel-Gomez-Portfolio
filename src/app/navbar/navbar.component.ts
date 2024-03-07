@@ -32,12 +32,13 @@ export class NavbarComponent {
     },
   ];
   scrollToElement(elementId: string): void {
-    window.scroll(0, this.getElementPosition(elementId) ?  this.getElementPosition(elementId) - 95: 0);
-    const drawer = document.getElementById("my-drawer-3") as HTMLInputElement
-    drawer.checked = false
+    const position = this.getElementPosition(elementId);
+    window.scroll(0, position ? position - 95 : 0);
+    const drawer = document.getElementById('my-drawer-3') as HTMLInputElement;
+    drawer.checked = false;
   }
   getElementPosition(elementId: string): number {
-    const position = document.getElementById(elementId)?.offsetTop || 0
-    return position
+    const position = document.getElementById(elementId)?.offsetTop || 0;
+    return position;
   }
 }

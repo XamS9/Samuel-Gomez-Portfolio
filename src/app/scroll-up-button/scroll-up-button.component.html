@@ -1,6 +1,6 @@
 <button
-  *ngIf="render"
   class="btn btn-circle fixed bottom-4 right-4 hover:scale-110 opacity-70 transition"
+  [class.hidden]="!render"
   (click)="scrollUp()"
 >
   <svg

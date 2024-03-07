@@ -14,7 +14,11 @@ export class ThemeButtonComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     public themeService: ThemeService
   ) {}
+  isLight = this.themeService.getLight();
   ngOnInit(): void {
+    this.themeService.isLight$.subscribe((isLight) => {
+      this.isLight = isLight;
+    });
     if (isPlatformBrowser(this.platformId)) {
       if (window.localStorage.getItem('theme')) {
         document.body.setAttribute('data-theme', 'lofi');

@@ -11,10 +11,8 @@ import { ThemeService } from '../theme.service';
   styleUrl: './cards.component.css',
 })
 export class CardsComponent implements OnInit {
-  constructor(public themeService: ThemeService) {
-    this.isLight = false;
-  }
-  isLight: boolean = false;
+  constructor(public themeService: ThemeService) {}
+  isLight = this.themeService.getLight();
   ngOnInit(): void {
     this.themeService.isLight$.subscribe((isLight) => {
       this.isLight = isLight;
