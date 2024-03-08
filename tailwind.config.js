@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "Helvetica", "system-ui", "Roboto"],
+        sans: ["Inter", "Helvetica", "system-ui"],
       },
       container: {
         padding: "1rem",
