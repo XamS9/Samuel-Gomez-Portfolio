@@ -31,6 +31,10 @@ export class CardsComponent implements OnInit {
       name: 'Express.js',
       icon: 'assets/icons/node-js.svg',
     },
+    Javascript: {
+      name: 'Javascript',
+      icon: 'assets/icons/node-js.svg',
+    },
     Postgres: {
       name: 'Postgresql',
       icon: 'assets/icons/PostgreSQL-Logo.wine.svg',
@@ -47,8 +51,23 @@ export class CardsComponent implements OnInit {
       name: 'Daisyui',
       icon: 'assets/icons/daisyui.svg',
     },
+    Websocket: {
+      name: 'Websockets',
+      icon: 'assets/icons/websocket-svgrepo-com.svg',
+    },
   };
   projects = [
+    {
+      id: 'web-socket-challenge',
+      title: 'Tradding - web sockets technical challenge',
+      description: `A web socket small system where you have some data sources, tradding agregators & a broadcaster to send message when some data has been changed using javascript`,
+      year: '2024',
+      bImage: 'assets/websockets-rm.webp',
+      wImage: 'assets/websockets-rm.webp',
+      tags: [this.TAGS.Javascript, this.TAGS.Websocket],
+      github: 'https://github.com/XamS9/web-socket-challenge',
+      mockupLink: 'websocket.com',
+    },
     {
       id: 'portfolio-item',
       title: 'Samuel Gomez Portfolio',
