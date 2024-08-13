@@ -59,8 +59,8 @@ export class CardsComponent implements OnInit {
   projects = [
     {
       id: 'web-socket-challenge',
-      title: 'Tradding - web sockets technical challenge',
-      description: `A web socket small system where you have some data sources, tradding agregators & a broadcaster to send message when some data has been changed using javascript`,
+      title: 'Trading - web sockets technical challenge',
+      description: `A web socket small system where you have some data sources, trading agregators & a broadcaster to send message when some data has been changed using javascript`,
       year: '2024',
       bImage: 'assets/websockets-rm.webp',
       wImage: 'assets/websockets-rm.webp',
