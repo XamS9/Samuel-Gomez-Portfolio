@@ -55,8 +55,41 @@ export class CardsComponent implements OnInit {
       name: 'Websockets',
       icon: 'assets/icons/websocket-svgrepo-com.svg',
     },
+    Vue: {
+      name: 'VueJS',
+      icon: 'assets/icons/vue.svg',
+    },
+    Vuetify: {
+      name: 'Vuetify',
+      icon: 'assets/icons/vuetify.svg',
+    },
+    Pinia: {
+      name: 'Pinia',
+      icon: 'assets/icons/pinia.svg',
+    },
+    Strapi: {
+      name: 'Strapi',
+      icon: 'assets/icons/strapi.svg',
+    },
   };
   projects = [
+    {
+      id: 'vuejs-store',
+      title: 'Our Store',
+      description:
+        'Vuejs-Store is a simple e-commerce application built using Vue.js. It provides a looks-alike shopping experience with a responsive UI, product listings, a shopping cart, and user authentication.',
+      year: '2025',
+      bImage: 'assets/vuejs-store.png',
+      wImage: 'assets/vuejs-store-w.png',
+      tags: [
+        this.TAGS.Vue,
+        this.TAGS.Vuetify,
+        this.TAGS.Pinia,
+        this.TAGS.Strapi,
+      ],
+      github: 'https://github.com/XamS9/vuejs-store',
+      mockupLink: 'ourstore.com',
+    },
     {
       id: 'web-socket-challenge',
       title: 'Trading - web sockets technical challenge',
