@@ -8,5 +8,5 @@
 .experiences {
   display: flex;
   flex-direction: column;
-  gap: 4px
+  gap: 24px
 }
