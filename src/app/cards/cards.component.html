@@ -71,11 +71,11 @@
         >
       </div>
       <div class="flex flex-wrap mt-2">
-        <ul class="grid grid-cols-2 lg:flex mb-2 gap-2">
+        <ul class="grid grid-cols-3 gap-2 mb-2">
           @for (tag of project.tags; track $index) {
-          <li class="animate-wiggle">
+          <li class="animate-wiggle flex items-center justify-center">
             <span
-              class="flex gap-x-2 rounded-full text-xs bg-neutral text-neutral-content py-1 px-2"
+              class="flex items-center gap-1 rounded-full text-xs bg-neutral text-neutral-content py-1 px-2"
             >
               <img
                 src="{{ tag.icon }}"
@@ -93,8 +93,9 @@
           {{ project.description }}
         </div>
         <footer class="flex items-end justify-start mt-4 gap-x-4">
+          @for (repos of project.github; track $index) {
           <a
-            href="{{ project.github }}"
+            href="{{ repos.repo }}"
             target="_blank"
             rel="noopener noreferrer"
             class="btn hover:scale-110 hover:opacity-70 transition max-md:hidden"
@@ -111,8 +112,9 @@
                 fill="currentColor"
               ></path>
             </svg>
-            Code</a
+            {{ repos.buttonTitle }}</a
           >
+          }
         </footer>
       </div>
     </div>

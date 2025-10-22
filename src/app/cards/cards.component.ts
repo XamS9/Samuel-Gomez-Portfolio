@@ -71,8 +71,49 @@ export class CardsComponent implements OnInit {
       name: 'Strapi',
       icon: 'assets/icons/strapi.svg',
     },
+    Typescript: {
+      name: 'Typescript',
+      icon: 'assets/icons/typescript.svg',
+    },
+    OpenAi: {
+      name: 'OpenAI',
+      icon: 'assets/icons/OpenAI-white-monoblossom.svg',
+    },
+    S3: {
+      name: 'AWS S3',
+      icon: 'assets/icons/Amazon-S3-Logo.svg',
+    },
   };
   projects = [
+    {
+      id: 'ai-scribe',
+      title: 'AI Scribe Notes Management Tool',
+      description:
+        "A full-stack healthcare application that transforms clinical documentation through AI-powered transcription and summarization. Healthcare providers can create notes by typing or uploading audio recordings, which are automatically transcribed using OpenAI's Whisper and formatted into standardized SOAP notes using GPT-4.",
+      year: '2025',
+      bImage: 'assets/ai-scribe.png',
+      wImage: 'assets/ai-scribe-w.png',
+      tags: [
+        this.TAGS.Node,
+        this.TAGS.Tailwind,
+        this.TAGS.Typescript,
+        this.TAGS.Postgres,
+        this.TAGS.React,
+        this.TAGS.OpenAi,
+        this.TAGS.S3,
+      ],
+      github: [
+        {
+          repo: 'https://github.com/XamS9/AI-Scribe-Notes-Management-Tool-Frontend',
+          buttonTitle: 'Frontend',
+        },
+        {
+          repo: 'https://github.com/XamS9/AI-Scribe-Notes-Management-Tool-Backend',
+          buttonTitle: 'Backend',
+        },
+      ],
+      mockupLink: 'healthcarescribe.ai',
+    },
     {
       id: 'vuejs-store',
       title: 'Our Store',
@@ -87,7 +128,12 @@ export class CardsComponent implements OnInit {
         this.TAGS.Pinia,
         this.TAGS.Strapi,
       ],
-      github: 'https://github.com/XamS9/vuejs-store',
+      github: [
+        {
+          repo: 'https://github.com/XamS9/vuejs-store',
+          buttonTitle: 'Code',
+        },
+      ],
       mockupLink: 'ourstore.com',
     },
     {
@@ -98,7 +144,12 @@ export class CardsComponent implements OnInit {
       bImage: 'assets/websockets-rm.webp',
       wImage: 'assets/websockets-rm.webp',
       tags: [this.TAGS.Javascript, this.TAGS.Websocket],
-      github: 'https://github.com/XamS9/web-socket-challenge',
+      github: [
+        {
+          repo: 'https://github.com/XamS9/web-socket-challenge',
+          buttonTitle: 'Code',
+        },
+      ],
       mockupLink: 'websocket.com',
     },
     {
@@ -110,14 +161,19 @@ export class CardsComponent implements OnInit {
       bImage: 'assets/portfolio.webp',
       wImage: 'assets/portfolio-w.webp',
       tags: [this.TAGS.Tailwind, this.TAGS.Angular, this.TAGS.Daisyui],
-      github: 'https://github.com/XamS9/xams-portfolio',
+      github: [
+        {
+          repo: 'https://github.com/XamS9/xams-portfolio',
+          buttonTitle: 'Code',
+        },
+      ],
       mockupLink: 'portfolio.com',
     },
     {
       id: 'bootcamp-item',
       title: 'Cincinnatus bootcamp - CRUD',
       description: `It's web platform based on udemy, you can learn about anything with online courses. As an admin you can create, read, update and delete every data with the dashboard and also subscribe to any course and view the content like a regular student as well.
-      `,
+    `,
       year: '2023',
       bImage: 'assets/bootcamp.webp',
       wImage: 'assets/bootcamp-w.webp',
@@ -127,7 +183,12 @@ export class CardsComponent implements OnInit {
         this.TAGS.Postgres,
         this.TAGS.Sequelize,
       ],
-      github: 'https://github.com/XamS9/mini-bootcamp',
+      github: [
+        {
+          repo: 'https://github.com/XamS9/mini-bootcamp',
+          buttonTitle: 'Code',
+        },
+      ],
       mockupLink: 'bootcamp.com',
     },
   ];
