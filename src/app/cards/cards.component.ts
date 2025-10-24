@@ -138,7 +138,7 @@ export class CardsComponent implements OnInit {
     },
     {
       id: 'web-socket-challenge',
-      title: 'Trading - web sockets technical challenge',
+      title: 'Trading - web sockets',
       description: `A web socket small system where you have some data sources, trading agregators & a broadcaster to send message when some data has been changed using javascript`,
       year: '2024',
       bImage: 'assets/websockets-rm.webp',
