@@ -12,3 +12,28 @@
     transform: translateY(0);
   }
 }
+
+.hero-name {
+  background: linear-gradient(
+    135deg,
+    oklch(var(--bc)) 0%,
+    oklch(var(--p)) 60%,
+    oklch(var(--a)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid oklch(var(--p) / 0.35);
+  color: oklch(var(--p));
+  background: oklch(var(--p) / 0.06);
+  letter-spacing: 0.025em;
+}

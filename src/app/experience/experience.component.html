@@ -1,13 +1,13 @@
 <div class="flex flex-col mb-6">
   <h2
-    class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-primary"
+    class="flex items-center mb-8 text-2xl font-semibold gap-x-3 text-base-content/80 tracking-tight"
   >
     <svg
-      width="28"
-      height="28"
+      width="22"
+      height="22"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 24 24"
+      class="text-primary"
     >
       <g
         fill="none"
@@ -25,166 +25,142 @@
     Experience
   </h2>
   @defer () {
-  <section class="experiences">
-    <!-- Intellisys -->
-    <article
-      class="h-fit p-4 ease hover:scale-105 duration-200 transition group"
-    >
-      <span
-        class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-200 group-hover:w-full"
-      ></span>
-      <span
-        class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-200 group-hover:h-full"
-      ></span>
-      <span
-        class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-200 group-hover:w-full"
-      ></span>
-      <span
-        class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-200 group-hover:h-full"
-      ></span>
-      <div class="flex flex-row max-sm:flex-col justify-between items-center">
-        <div class="flex-row flex items-center gap-2">
-          <img
-            src="assets/intellisys_logo.webp"
-            alt="Intellisys Logo"
-            class="h-14"
-          />
-          <h3 class="text-xl font-medium">Intellisys D. Corp.</h3>
+  <section class="timeline-section">
+    <!-- Flatiron -->
+    <div class="timeline-entry group">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card relative overflow-hidden rounded-xl p-5 transition-all duration-300 group-hover:scale-[1.02] group-hover:bg-base-content/[0.03]">
+        <span class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <span class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <div class="flex flex-row max-sm:flex-col justify-between items-start gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <img
+              src="assets/icons/flatiron-logo.png"
+              alt="Flatiron Logo"
+              class="h-10 w-10 object-contain rounded-lg"
+            />
+            <div>
+              <h3 class="text-base font-semibold">Flatiron</h3>
+              <p class="text-xs text-base-content/50">Full Stack Developer · Full-Time</p>
+            </div>
+          </div>
+          <span class="text-xs text-base-content/40 whitespace-nowrap pt-1">March 2026 – Today</span>
         </div>
-        <div class="items-center sm:pt-2">
-          <p class="text-lg font-semibold">Full Stack Developer</p>
-          <p>Jun 2022 – Today</p>
-        </div>
+        <ul class="space-y-2 text-sm text-base-content/75 leading-relaxed">
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Integrated <b class="text-base-content/90">third party APIs</b> for ingestion using <b class="text-base-content/90">Apache Airflow</b>.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Focus mainly as <b class="text-base-content/90">AI Native</b> developer.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            <b class="text-base-content/90">Refactored</b> legacy code to improve maintainability and performance.
+          </li>
+        </ul>
       </div>
-      <ul class="pt-5 lg:ps-3 ps-0 list-none lg:list-disc">
-        <li>
-          <p>
-            <b>Reduced</b> unnecessary logic by applying best practices to
-            handle request-based variations, achieving a <b>30%</b> decrease in
-            API calls.
-          </p>
-        </li>
-        <li>
-          <p>
-            <b>Integrated</b> multiple authentication providers into a
-            <b>React Native</b> app, crafted <b>user-friendly</b> interfaces,
-            and implemented notification services via <b>Firebase</b>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Designed and implemented the <b>frontend layout</b>, application
-            structure, and <b>authentication flow</b> for a web project from the
-            ground up.
-          </p>
-        </li>
-        <li>
-          <p>
-            Built and maintained a <b>REST API backend</b> using <b>Nest.js</b>,
-            employing the repository pattern to ensure scalability and code
-            reusability.
-          </p>
-        </li>
-        <li>
-          <p>
-            Designed and deployed a <b>PostgreSQL</b> database from scratch,
-            optimized to handle <b>complex queries</b> and
-            <b>large-scale datasets</b>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Implemented <b>Google Identity Platform</b> with support for
-            <b>Google Provider</b> and <b>Credential-based</b> authentication in
-            a frontend web app.
-          </p>
-        </li>
-        <li>
-          <p>
-            <b>Dockerized</b> multiple backend services and databases to
-            streamline development, testing, and deployment workflows.
-          </p>
-        </li>
-        <li>
-          <p>
-            Integrated an <b>Express.js</b> backend with a <b>Strapi CMS</b>,
-            both connected to a unified PostgreSQL database, aligning models in
-            Express with <b>Strapi's auto-generated schema</b> for seamless data
-            consistency.
-          </p>
-        </li>
-      </ul>
-    </article>
+    </div>
+
+    <!-- Intellisys -->
+    <div class="timeline-entry group">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card relative overflow-hidden rounded-xl p-5 transition-all duration-300 group-hover:scale-[1.02] group-hover:bg-base-content/[0.03]">
+        <span class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <span class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <div class="flex flex-row max-sm:flex-col justify-between items-start gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <img
+              src="assets/intellisys_logo.webp"
+              alt="Intellisys Logo"
+              class="h-10 w-10 object-contain rounded-lg"
+            />
+            <div>
+              <h3 class="text-base font-semibold">Intellisys D. Corp.</h3>
+              <p class="text-xs text-base-content/50">Full Stack Developer · Full-Time</p>
+            </div>
+          </div>
+          <span class="text-xs text-base-content/40 whitespace-nowrap pt-1">Jun 2022 – April 2026</span>
+        </div>
+        <ul class="space-y-2 text-sm text-base-content/75 leading-relaxed">
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Implemented <b class="text-base-content/90">Google Identity Platform</b>, Provider services, impersonation, and <b class="text-base-content/90">Workspace Add-ons</b> to enhance secure authentication.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Integrated <b class="text-base-content/90">Google Pub/Sub</b> &amp; <b class="text-base-content/90">Classroom API</b> with <b class="text-base-content/90">Express.js</b> for near real-time data sync and custom attachments.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Reduced API request time by <b class="text-base-content/90">60%</b> through database query optimizations and refactoring.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Accelerated <b class="text-base-content/90">CSV imports</b> by using hashmap lookups, minimizing redundant DB calls.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Improved <b class="text-base-content/90">frontend performance</b> with optimized lazy loading.
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- KT-Pillar Tech -->
-    <article
-      class="h-fit p-4 ease hover:scale-105 duration-200 transition group"
-    >
-      <span
-        class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-200 group-hover:w-full"
-      ></span>
-      <span
-        class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-200 group-hover:h-full"
-      ></span>
-      <span
-        class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-200 group-hover:w-full"
-      ></span>
-      <span
-        class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-200 group-hover:h-full"
-      ></span>
-      <div class="flex flex-row max-sm:flex-col justify-between items-center">
-        <div class="flex-row flex items-center gap-2">
-          <img
-            src="assets/ktpillar_logo.webp"
-            alt="KT-Pillar Tech Logo"
-            class="h-14"
-          />
-          <h3 class="text-xl font-medium">KT-Pillar Tech</h3>
+    <div class="timeline-entry group">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card relative overflow-hidden rounded-xl p-5 transition-all duration-300 group-hover:scale-[1.02] group-hover:bg-base-content/[0.03]">
+        <span class="ease absolute left-0 top-0 h-0 w-0 border-t-2 rounded-t-full border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <span class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary transition-all duration-300 group-hover:w-full"></span>
+        <span class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary transition-all duration-300 group-hover:h-full"></span>
+        <div class="flex flex-row max-sm:flex-col justify-between items-start gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <img
+              src="assets/ktpillar_logo.webp"
+              alt="KT-Pillar Tech Logo"
+              class="h-10 w-10 object-contain rounded-lg"
+            />
+            <div>
+              <h3 class="text-base font-semibold">KT-Pillar Tech</h3>
+              <p class="text-xs text-base-content/50">Full Stack Developer · Part-Time</p>
+            </div>
+          </div>
+          <span class="text-xs text-base-content/40 whitespace-nowrap pt-1">Apr 2025 – Jul 2025</span>
         </div>
-        <div class="items-center sm:pt-2">
-          <p class="text-lg font-semibold">Full Stack Developer (Part-Time)</p>
-          <p>Apr 2025 – Jul 2025</p>
-        </div>
+        <ul class="space-y-2 text-sm text-base-content/75 leading-relaxed">
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Built a <b class="text-base-content/90">statistics dashboard</b> with dynamic filters, interactive charts, and data tables supporting inline row actions.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Designed <b class="text-base-content/90">reusable React components</b> with custom hooks for scalable development.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Developed backend services, API endpoints, database migrations, and automated tests.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-primary mt-1 shrink-0">›</span>
+            Implemented <b class="text-base-content/90">report generation</b> with <b class="text-base-content/90">pdf-lib</b> for on-demand PDF exports.
+          </li>
+        </ul>
       </div>
-      <ul class="pt-5 lg:ps-3 ps-0 list-none lg:list-disc">
-        <li>
-          <p>
-            Built a <b>statistics dashboard</b> with dynamic filters,
-            interactive charts, and data tables supporting inline row actions,
-            improving <b>data accessibility</b> for end-users.
-          </p>
-        </li>
-        <li>
-          <p>
-            Designed and implemented <b>reusable, customizable React
-            components</b> using custom hooks to streamline development and
-            enhance scalability.
-          </p>
-        </li>
-        <li>
-          <p>
-            Developed and maintained <b>backend services</b>, including API
-            endpoints, database migrations, and automated tests, ensuring
-            <b>reliability</b> and smooth feature delivery.
-          </p>
-        </li>
-        <li>
-          <p>
-            Implemented <b>report generation services</b> with <b>pdf-lib</b>,
-            enabling on-demand PDF export of analytics and reports.
-          </p>
-        </li>
-      </ul>
-    </article>
+    </div>
   </section>
   } @placeholder {
-  <div role="status" class="max-w-sm animate-pulse">
-    <div class="h-2.5 w-48 mb-4 bg-base-content rounded-full"></div>
-    <div class="h-2 max-w-[360px] mb-2.5 bg-base-content rounded-full"></div>
-    <div class="h-2 mb-2.5 bg-base-content rounded-full"></div>
-    <div class="h-2 max-w-[330px] mb-2.5 bg-base-content rounded-full"></div>
-    <div class="h-2 max-w-[300px] mb-2.5 bg-base-content rounded-full"></div>
-    <div class="h-2 max-w-[360px] bg-base-content rounded-full"></div>
+  <div role="status" class="max-w-sm animate-pulse pl-8">
+    <div class="h-2.5 w-48 mb-4 bg-base-content/20 rounded-full"></div>
+    <div class="h-2 max-w-[360px] mb-2.5 bg-base-content/20 rounded-full"></div>
+    <div class="h-2 mb-2.5 bg-base-content/20 rounded-full"></div>
+    <div class="h-2 max-w-[330px] mb-2.5 bg-base-content/20 rounded-full"></div>
     <span class="sr-only">Loading...</span>
   </div>
   }

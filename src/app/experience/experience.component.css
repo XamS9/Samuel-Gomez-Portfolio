@@ -1,12 +1,47 @@
-.experience-tasks {
-  padding-block-start: 1em;
-  padding-inline-start: 2em;
-  font-size: 1.1rem;
-  list-style: disc;
-}
-
-.experiences {
+.timeline-section {
   display: flex;
   flex-direction: column;
-  gap: 24px
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: oklch(var(--p) / 0.2);
+  border-radius: 999px;
+}
+
+.timeline-entry {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-entry:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.875rem;
+  top: 1.25rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: oklch(var(--p));
+  box-shadow: 0 0 0 3px oklch(var(--p) / 0.15);
+  transition: box-shadow 0.2s;
+}
+
+.timeline-entry:hover .timeline-dot {
+  box-shadow: 0 0 0 6px oklch(var(--p) / 0.25);
+  background: oklch(var(--p) / 0.85);
+}
+
+.timeline-card {
+  border: 1px solid oklch(var(--bc) / 0.08);
 }

@@ -1,8 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Offset scroll targets for the fixed navbar */
+#home, #experience, #projects, #stack, #contact {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background-color: oklch(var(--p) / 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--p) / 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--p) / 0.7);
 }
